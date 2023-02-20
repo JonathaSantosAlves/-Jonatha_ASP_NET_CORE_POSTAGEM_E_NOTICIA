@@ -1,0 +1,156 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@*<h1>@ViewData["Title"]</h1>*@
+
+<div class="container-fluid bg-white">
+    <div class="row">
+        <div class="col">
+            <div class="border">
+                <h1 style="font-size:3vmin;text-align:center">Publicações</h1>
+            </div>
+            <hr />
+
+            @if (ViewBag.view_postagem.Count > 0)
+            {
+                @foreach (var postagem_item in ViewBag.view_postagem)
+                {
+                    <div class="card">
+                        <div class="border">
+                            <h5 style="font-size:2.8vmin">
+                                <span class="badge rounded-pill bg-primary">
+                                    <i class="far fa-user-circle"></i>Publicado por: @postagem_item.USUARIO
+                                </span> <small><span class="text-end">@Convert.ToDateTime(postagem_item.DATA_REGISTRO).ToString("dd-MM-yyyy")</span></small>
+                            </h5>
+
+                            <div class="card-header">
+                                <h2 style="font-size:2.8vmin;text-align:center">
+                                    <span class="">
+                                        @Html.Raw(@postagem_item.TITULO)
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                <h3 style="font-size:2.3vmin;text-align:center">
+                                    @Html.Raw(@postagem_item.DESCRICAO)
+                                </h3>
+
+                                @if (@postagem_item.TIPO == "IMAGEM")
+                                {
+                                    <center>
+                                        <img src="@postagem_item.ARQUIVO" class="img-fluid" alt="...">
+                                    </center>
+                                }
+                                @if (@postagem_item.TIPO == "VIDEO")
+                                {
+                                    <center>
+                                        <div class="ratio ratio-21x9">
+                                            <video controls>
+                                                <source src="https://edisciplinas.usp.br/pluginfile.php/5196097/mod_resource/content/1/Teste.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </center>
+                                }
+                                @if (@postagem_item.TIPO == "YOUTUBE")
+                                {
+                                    <center>
+                                        <div class="ratio ratio-21x9">
+                                            <iframe src="@postagem_item.ARQUIVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </center>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <h5 class="text-center"><i class="far fa-sad-tear"></i> Não há post publicado</h5>
+            }
+            <br />
+        </div>
+
+        <div class="col-3">
+            <div class="border">
+                <h1 style="font-size:3vmin;text-align:center">Publicações</h1>
+            </div>
+            <hr />
+
+            @if (ViewBag.view_postagem.Count > 0)
+            {
+                @foreach (var postagem_item in ViewBag.view_postagem)
+                {
+                    <div class="card">
+                        <div class="border">
+                            <h5 style="font-size:2.8vmin">
+                                <span class="badge rounded-pill bg-primary">
+                                    <i class="far fa-user-circle"></i>Publicado por: @postagem_item.USUARIO
+                                </span> <small><span class="text-end">@Convert.ToDateTime(postagem_item.DATA_REGISTRO).ToString("dd-MM-yyyy")</span></small>
+                            </h5>
+
+                            <div class="card-header">
+                                <h2 style="font-size:2.8vmin;text-align:center">
+                                    <span class="">
+                                        @Html.Raw(@postagem_item.TITULO)
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                @if (@postagem_item.TIPO == "IMAGEM")
+                                {
+                                    <center>
+                                        <img src="@postagem_item.ARQUIVO" class="img-fluid" alt="...">
+                                    </center>
+                                }
+                                @if (@postagem_item.TIPO == "VIDEO")
+                                {
+                                    <center>
+                                        <div class="ratio ratio-21x9">
+                                            <video controls>
+                                                <source src="https://edisciplinas.usp.br/pluginfile.php/5196097/mod_resource/content/1/Teste.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </center>
+                                }
+                                @if (@postagem_item.TIPO == "YOUTUBE")
+                                {
+                                    <center>
+                                        <div class="ratio ratio-21x9">
+                                            <iframe src="@postagem_item.ARQUIVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                    </center>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <h5 class="text-center"><i class="far fa-sad-tear"></i> Não há Noticias publicado</h5>
+            }
+            <br />
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+    <script>
+
+        $('.btnAddLiked').click(function () {
+            var id = $(this).attr("data-id");
+            var Url = '@Url.Action("CurtirPost","Home")/';
+            $.post(Url + id, function () {
+            });
+            //alert("Post curtido com sucesso!")
+            window.location.href = '@Url.Action("Index","Home")';
+        })
+    </script>
+}
+
+
+

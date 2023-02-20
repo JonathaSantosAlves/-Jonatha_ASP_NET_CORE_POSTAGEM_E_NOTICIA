@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Jonatha_ASP_Postagem_WebAplicattion</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Jonatha_ASP_Postagem_WebAplicattion.styles.css" asp-append-version="true" />
+
+    @*icones do fonte awesome*@
+    <script src="https://kit.fontawesome.com/71972a7c13.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/71972a7c13.css" crossorigin="anonymous">
+
+    @*Componentes para personalizar o Editor de Texto*@
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a data-bs-toggle="offcanvas" href="#offcanvasExample" class="nav-link px-0 align-middle">
+                <i class="fa-solid fa-bars"></i>
+                Jonatha Sistema de Post e Noticia (ASP.NET CORE COM CONCEITO DDD)
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-lg-block"><img width="50%" class="img-profile rounded-circle mx-auto mb-2" src="assets/img/JONATHA.jpeg" alt="..." /></span>
+            </a>
+        </div>
+        <hr />
+        <div class="offcanvas-body">
+            <a asp-controller="Home" asp-action="Index" class="nav-link px-0 align-middle">
+                <h1 style="font-size:2.1vw;text-align:center"><i class="fas fa-house-user"></i></h1>
+                <h5 style="font-size:1.4vw;text-align:center"><span class="ms-1 d-none d-sm-inline">Home</span></h5>
+            </a>
+            <hr />
+            <a asp-controller="Postagem" asp-action="Index" class="nav-link px-0 align-middle">
+                <h1 style="font-size:2.1vw;text-align:center"><i class="fa-solid fa-signs-post"></i></h1>
+                <h5 style="font-size:1.4vw;text-align:center"><span class="ms-1 d-none d-sm-inline">Registrar Post</span></h5>
+            </a>
+            <hr />
+            <a asp-controller="Postagem" asp-action="Index" class="nav-link px-0 align-middle">
+                <h1 style="font-size:2.1vw;text-align:center"><i class="fa-solid fa-newspaper"></i></i></h1>
+                <h5 style="font-size:1.4vw;text-align:center"><span class="ms-1 d-none d-sm-inline">Registrar Noticia</span></h5>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <br />
+        @RenderBody()
+
+        <script>
+            $('#summernote1').summernote({
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+        </script>
+
+        <script>
+            $('#summernote2').summernote({
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+        </script>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

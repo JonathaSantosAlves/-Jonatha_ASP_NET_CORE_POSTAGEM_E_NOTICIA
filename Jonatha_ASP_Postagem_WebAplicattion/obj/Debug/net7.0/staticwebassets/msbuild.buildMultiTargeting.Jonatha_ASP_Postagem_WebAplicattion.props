@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Jonatha_ASP_Postagem_WebAplicattion.props" />
+</Project>

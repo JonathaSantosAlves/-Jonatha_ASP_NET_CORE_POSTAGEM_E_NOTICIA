@@ -1,0 +1,12 @@
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\bin\Debug\net7.0\Jonatha_ASP_Postagem_Data.deps.json
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\bin\Debug\net7.0\Jonatha_ASP_Postagem_Data.dll
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\bin\Debug\net7.0\Jonatha_ASP_Postagem_Data.pdb
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\Jonatha_ASP_Postagem_Data.csproj.AssemblyReference.cache
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\Jonatha_ASP_Postagem_Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\Jonatha_ASP_Postagem_Data.AssemblyInfoInputs.cache
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\Jonatha_ASP_Postagem_Data.AssemblyInfo.cs
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\Jonatha_ASP_Postagem_Data.csproj.CoreCompileInputs.cache
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\Jonatha_ASP_Postagem_Data.dll
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\refint\Jonatha_ASP_Postagem_Data.dll
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\Jonatha_ASP_Postagem_Data.pdb
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Data\obj\Debug\net7.0\ref\Jonatha_ASP_Postagem_Data.dll

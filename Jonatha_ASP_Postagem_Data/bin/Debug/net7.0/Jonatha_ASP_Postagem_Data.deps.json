@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Jonatha_ASP_Postagem_Data/1.0.0": {
+        "runtime": {
+          "Jonatha_ASP_Postagem_Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Jonatha_ASP_Postagem_Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\bin\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.deps.json
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\bin\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.dll
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\bin\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.pdb
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\bin\Debug\net7.0\Jonatha_ASP_Postagem_Domain.dll
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\bin\Debug\net7.0\Jonatha_ASP_Postagem_Domain.pdb
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.csproj.AssemblyReference.cache
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.AssemblyInfoInputs.cache
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.AssemblyInfo.cs
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.csproj.CoreCompileInputs.cache
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.csproj.CopyComplete
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.dll
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\refint\Jonatha_ASP_Postagem_Repositories.dll
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\Jonatha_ASP_Postagem_Repositories.pdb
+C:\Users\jonat\source\repos\Jonatha_ASP_Postagem\Jonatha_ASP_Postagem_Repositories\obj\Debug\net7.0\ref\Jonatha_ASP_Postagem_Repositories.dll

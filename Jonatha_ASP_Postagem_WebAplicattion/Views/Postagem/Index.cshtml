@@ -1,0 +1,110 @@
+﻿@if (TempData["sucesso_mensagem"] != null)
+{
+
+    <script>
+        var msg = '@TempData["sucesso_mensagem"]';
+        alert(msg);
+    </script>
+
+    <div class="alert alert-success alert-dismissable">
+        <strong>@TempData["sucesso_mensagem"]</strong>
+    </div>
+}
+
+@if (TempData["erro_mensagem"] != null)
+{
+
+    <script>
+        var msg = '@TempData["erro_mensagem"]';
+        alert(msg);
+    </script>
+
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["erro_mensagem"]</strong>
+    </div>
+}
+
+<div class="container-fluid bg-white">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <label>Lista de Post</label>
+                    <button type="button" class="btn btn-outline-primary float-end" onclick="location.href='@Url.Action("Registrar", "Postagem")'">Novo Post</button>
+                    <br />
+                    <hr />
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>DATA</th>
+                                <th>USUARIO</th>
+                                <th>TITULO</th>
+                                <th>ARQUIVO</th>
+                                <th>DESCRICAO</th>
+                                <th>TIPO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.view_postagem.Count > 0)
+                            {
+                                foreach (var postagem_item in ViewBag.view_postagem)
+                                {
+                                    <tr>
+                                        <td>@Convert.ToDateTime(postagem_item.DATA_REGISTRO).ToString("dd-MM-yyyy")</td>
+                                        <td>@postagem_item.USUARIO</td>
+                                        <td>@Html.Raw(@postagem_item.TITULO)</td>
+                                        <td>@postagem_item.ARQUIVO</td>
+                                        <td>@Html.Raw(@postagem_item.DESCRICAO)</td>
+                                        <td>@postagem_item.TIPO</td>
+
+                                        <td>
+                                           @* <button type="button" class="btn btnAlterar" data-id="@postagem_item.ID"><i class="fas fa-pen"></i></button>*@
+                                             <a href="@Url.Action("Alterar", "Postagem", new { id =@postagem_item.ID })"><i class="fas fa-pen"></i></a>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btnExcluir" data-id="@postagem_item.ID"><i class="far fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+
+                                }
+                            }
+                            else
+                            {
+                                <template>Não há Post publicado</template>
+                            }
+
+                        </tbody>
+                    </table>
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal" tabindex="-1" role="dialog" arial-hidden="true"></div>
+@section scripts{
+    <script>
+        $(".btnAlterar").click(function () {
+            var Url = '@Url.Action("Alterar","Postagem")/';
+            var id = $(this).attr("data-id");
+            $('.modal').load(Url + id, function () {
+                $('.modal').modal('show');              
+            });
+        });
+
+        $(".btnExcluir").click(function () {
+            var id = $(this).attr("data-id");
+            var Url = '@Url.Action("Excluir","Postagem")/'
+
+            if (confirm("Realmente deseja excluir este Post?")) {
+                $.post(Url + id, function () {
+                });
+                alert("Post excluido com sucesso!");
+                window.location.href = '@Url.Action("Index","Postagem")';;
+            }
+        });
+    </script>
+}

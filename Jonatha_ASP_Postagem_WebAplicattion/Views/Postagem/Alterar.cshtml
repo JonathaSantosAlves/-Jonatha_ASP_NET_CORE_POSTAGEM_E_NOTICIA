@@ -1,0 +1,72 @@
+﻿@model Jonatha_ASP_Postagem_Domain.Postagem
+
+<html lang="en">
+@if (TempData["sucesso_mensagem"] != null)
+{
+    <script>
+        var msg = '@TempData["sucesso_mensagem"]';
+        alert(msg);
+    </script>
+
+    <div class="alert alert-success alert-dismissable">
+        <strong>@TempData["sucesso_mensagem"]</strong>
+    </div>
+}
+
+@if (TempData["erro_mensagem"] != null)
+{
+    <script>
+        var msg = '@TempData["erro_mensagem"]';
+        alert(msg);
+    </script>
+
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["erro_mensagem"]</strong>
+    </div>
+}
+
+<div class="container">
+    <br /><br />
+    <div class="modal-dialog modal-xl modal-dialog-centere">
+        <div class="modal-content">
+            <div class="container">
+                <form asp-action="Alterar" asp-controller="Postagem" method="post">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">@ViewBag.Id - Alterar um Post</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" arial-label="Close" onclick="location.href='@Url.Action("Index", "Postagem")'"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col">
+                            <label class="form-label">Titulo</label>
+                            <textarea id="summernote1" class="form-control" type="text" asp-for="TITULO" required="required"></textarea>
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Descrição</label>
+                            <textarea id="summernote2" class="form-control" type="text" asp-for="DESCRICAO" required="required"></textarea>
+                        </div>
+                        <div class="col">
+                            <label class="form-label">Escolha o Tipo do Arquivo</label>
+                            <select class="form-select" asp-for="TIPO" required="required">
+                                <option value="IMAGEM">IMAGEM</option>
+                                <option value="VIDEO">VIDEO</option>
+                                <option value="YOUTUBE">YOUTUBE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="col-12">
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success">
+                                Salvar
+                            </button>
+
+                        </div>
+                    </div>
+
+                </form>
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+        </div>
+    </div>
+</div>
