@@ -12,7 +12,8 @@ namespace Jonatha_ASP_Postagem_Domain
         public DateTime DATA_REGISTRO { get; set; }
         public string? USUARIO { get; set; }
         public string? TITULO { get; set; }
-        public string? ARQUIVO { get; set; }    
+        public string? ARQUIVO { get; set; }
+        public string? TIPO { get; set; }
 
-}
+    }
 }
